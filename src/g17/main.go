@@ -46,5 +46,5 @@ func main() {
 	//fmt.Println(c == f)          // 错误
 
 	fmt.Println(f == Fahrenheit(c)) //"true"
-	fmt.Println(f == CToF(AbsoluteZeroC))
+	fmt.Println(c == FToC(f))
 }
