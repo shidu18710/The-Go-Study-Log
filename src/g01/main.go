@@ -9,6 +9,7 @@ func main() {
 	// 定义两个空字符串变量s和sep
 	var s, sep string
 	//遍历 os.Args 的每个参数 从下标 1 开始
+	//获取参数 从下标一开始 [/tmp/go-build2736902484/b001/exe/main a b c d] 懂得
 	for i := 1; i < len(os.Args); i++ {
 		// 将sep和参数值拼接到s上
 		// sep初始为空,然后变成" "用于在参数之间添加空格
