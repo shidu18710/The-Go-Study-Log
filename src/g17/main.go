@@ -47,4 +47,6 @@ func main() {
 
 	fmt.Println(f == Fahrenheit(c)) //"true"
 	fmt.Println(c == FToC(f))
+
+	fmt.Println(Fahrenheit(AbsoluteZeroC))
 }
