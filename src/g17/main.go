@@ -31,6 +31,19 @@ func FToC(f Fahrenheit) Celsius {
 	return Celsius((f - 32) * 5 / 9)
 }
 
+// 定义了Celsius类型的String()方法
+// func (接收者变量 接收者类型) 方法名(参数列表) (返回值列表)
+// 这个好像是重写了String()方法？
+func (c Celsius) String() string {
+	// 使用fmt.Sprintf格式化字符串,返回带有°C符号的摄氏温度值。
+
+	return fmt.Sprintf("%g°C", c)
+}
+
+func (c Fahrenheit) Number() bool {
+	return c == Fahrenheit(1)
+}
+
 func main() {
 	//类型
 	fmt.Printf("%g\n", BoilingC-FreezingC)
@@ -49,4 +62,16 @@ func main() {
 	fmt.Println(c == FToC(f))
 
 	fmt.Println(Fahrenheit(AbsoluteZeroC))
+
+	a := FToC(212.0)
+
+	fmt.Println(a.String())
+	/*
+		为什么不使用String()也能输出格式化字符，这是因为我们为Celsius类型定义了String()方法,Go语言中fmt包的Print系列函数在打印值时会自动调用该值的String()方法。
+		为什么呢，因为Go语言的fmt包按照约定只会调用String()方法,而不会调用其他的方法名。
+	*/
+	fmt.Printf("%s\n", a)
+
+	b := CToF(100)
+	fmt.Println(b.Number())
 }
