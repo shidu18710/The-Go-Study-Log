@@ -20,7 +20,7 @@ func main() {
 	// 打印最终拼接得到的字符串s
 	fmt.Println(s)
 
-	fmt.Println(os.Args) //输出：[/tmp/go-build2736902484/b001/exe/main a b c d]
+	fmt.Println(os.Args) // 输出：[/tmp/go-build2736902484/b001/exe/main a b c d]
 	fmt.Println(os.Args[0])
-	fmt.Println(os.Args[1:]) //输出：[a b c d]
+	fmt.Println(os.Args[1:]) // 输出：[a b c d]
 }
