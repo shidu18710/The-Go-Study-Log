@@ -73,5 +73,6 @@ func main() {
 	fmt.Printf("%s\n", a)
 
 	b := CToF(100)
+	fmt.Println(b)
 	fmt.Println(b.Number())
 }
